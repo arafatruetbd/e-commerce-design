@@ -21,7 +21,7 @@
           <img src="images/logo.png" width="120px" />
         </div>
         <nav>
-          <ul>
+          <ul id="MenuItems">
             <li><a href="#">Home</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">About</a></li>
@@ -30,6 +30,7 @@
           </ul>
         </nav>
         <img src="images/cart.png" width="30px" height="30px">
+        <img src="images/menu.png" class="menu-icon" onClick="menutoggle()">
       </div>
       <div class="row">
         <div class="col-2">
@@ -44,7 +45,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- -------------Featured Categories------------ -->
 
   <div class="categories">
@@ -233,7 +234,7 @@
   </div>
 
   <!-- ---------------Testimonial----------------------->
-  
+
   <div class="testimonial">
     <div class="small-container">
       <div class="row">
@@ -330,26 +331,43 @@
         </div>
         <div class="footer-col-3">
           <h3>Useful Links</h3>
-            <ul>
-              <li>Coupons</li>
-              <li>Blog Post</li>
-              <li>Return Policy</li>
-              <li>Join Affliate</li>
-            </ul>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affliate</li>
+          </ul>
         </div>
         <div class="footer-col-4">
           <h3>Follow us</h3>
-            <ul>
-              <li>Facebook</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
-              <li>Youtube</li>
-            </ul>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
         </div>
       </div>
       <hr>
       <p class="copyright">Copyright 2022 - Arafat Hossain</p>
     </div>
   </div>
+
+  <!-- -------------------js for toggle menu---------------------- -->
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px"
+      } else {
+        MenuItems.style.maxHeight = "0px"
+      }
+    }
+  </script>
 </body>
+
 </html>
